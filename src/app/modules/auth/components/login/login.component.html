@@ -1,1 +1,21 @@
-<p>login works!</p>
+<div class="card mt-4  w-75 mx-auto">
+    <div class="card-header">
+        <p class="small" *ngIf="errorMessage">{{errorMessage}}</p>
+        <p class="lead my-auto">Log In</p>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit(model)">
+            <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+          </form>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-block btn-red" type="submit" (click)="onSubmit(model)">Log in</button>
+        <div class="socials">
+            <div class="icons ">
+                Icons
+            </div>
+        </div>
+            <p routerLink="/auth/register" >Don't have an account ?  <span style="color:var(--red); font-weight:bold;">Sign Up</span></p>
+            <p class="text-red">Forgot password</p>        
+    </div>
+</div>

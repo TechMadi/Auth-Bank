@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -18,7 +19,8 @@ import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
     NgbModule,
     ReactiveFormsModule,
     FormlyModule.forRoot({ extras: { lazyRender: true } }),
-    FormlyBootstrapModule
+    FormlyBootstrapModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

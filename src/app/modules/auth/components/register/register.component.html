@@ -1,0 +1,15 @@
+<div class="card mt-4  w-75 mx-auto">
+    <div class="card-header">
+        <p class="small" *ngIf="errorMessage">{{errorMessage}}</p>
+        <p class="lead my-auto">Sign  Up</p>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="register(model)">
+            <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+          </form>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-block btn-red" type="submit" (click)="register(model)">Sign Up</button>
+            <p routerLink="/auth/register" >Already have an account ?   <span style="color:var(--red); font-weight:bold;">  Sign In</span></p>      
+    </div>
+</div>

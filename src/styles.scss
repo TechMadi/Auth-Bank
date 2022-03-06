@@ -1,4 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import './variables';
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+body{
+    background:var(--black) ;
+}
+
+.card{
+    background:var(--blackLight) !important;
+    color:var(--white) !important;
+    font-size:1rem;
+    font-weight:300;
+    
+    .card-header{
+        border:0px !important;
+    } 
+    .card-footer{
+        text-align: center;
+        p{
+            cursor: pointer;
+        }
+    }
+    }
+    .btn-red{
+        background: var(--red);
+        border-radius:1rem;
+    }
+    .text-red{
+        color: var(--red)
+    }
+    
